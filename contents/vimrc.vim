@@ -61,3 +61,17 @@ set updatecount =100
 set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
+
+" Remap esc because of touchbar
+" Make `jj` and `jk` throw you into normal mode
+inoremap jj <esc>
+inoremap jk <esc>
+
+" Always use n to search forward, and N to search backward
+nnoremap <expr> n 'Nn'[v:searchforward]
+nnoremap <expr> N 'nN'[v:searchforward]
+
+" Disable beeping
+set noerrorbells
+set novisualbell
+set t_vb=
